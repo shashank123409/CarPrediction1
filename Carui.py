@@ -5,7 +5,7 @@ import numpy as np
 # ---------------------------
 # Load Trained Model
 # ---------------------------
-model = joblib.load(open("car_price_prediction.pkl", "rb"))  # apna model file ka naam
+model = joblib.load("car_price_prediction.pkl")  # apna model file ka naam
 
 st.title("🚗 Car Price Prediction App")
 st.write("Is app se aap apni gaadi ki *selling price* predict kar sakte ho.")
