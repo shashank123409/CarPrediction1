@@ -1,11 +1,18 @@
 import streamlit as st
 import joblib
 import numpy as np
+from sklearn.ensemble import RandomForestRegressor
+
 
 # ---------------------------
 # Load Trained Model
 # ---------------------------
-model = joblib.load("car_price_prediction.pkl")  # apna model file ka naam
+model1=RandomForestRegressor()
+model1.load_model('rf_params.json')
+# ---------------------------
+# Load Trained Model
+# ---------------------------
+# model = joblib.load("car_price_prediction.pkl")  # apna model file ka naam
 
 st.title("🚗 Car Price Prediction App")
 st.write("Is app se aap apni gaadi ki *selling price* predict kar sakte ho.")
